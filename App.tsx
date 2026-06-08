@@ -1,16 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
-function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello Mizan! 🚀</Text>
-      <Text>My First React Native App</Text>
-      <Text style={styles.title2}>My second title</Text>
-    </View>
-  );
-}
-
+import { View, Text, StyleSheet, Image } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -20,13 +9,24 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
   },
-  title2: {
+  subtitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+  },
+  text: {
+    fontSize: 16,
   },
 });
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Image source={require('./assets/images/logo.png')} />
+      <Text style={styles.title}>Hello Mizan! 🚀</Text>
+      <Text style={styles.subtitle}>My First React Native App</Text>
+      <Text style={styles.text}>My second title</Text>
+    </View>
+  );
+};
 
 export default App;
